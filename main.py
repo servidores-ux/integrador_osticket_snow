@@ -1,1 +1,6 @@
-print("hello world")
+from psql import PSQL
+def main():
+    print("Hello, World!")
+    pass
+if __name__=="__main__":
+    main()
