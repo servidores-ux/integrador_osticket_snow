@@ -1,12 +1,13 @@
 import os
 import psycopg2 
 class PSQL:
-    def __init(self):
-        self._pg_host = os.getenv("PG_HOST")
-        self._pg_port = int(os.getenv("PG_PORT", 5432))
-        self._pg_user = os.getenv("PG_USER")
-        self._pg_password = os.getenv("PG_PASSWORD")
-        self._pg_dbname = os.getenv("PG_DBNAME")
+    def __init__(self):
+        self._pg_host = os.getenv("IP_SNOW")
+        self._pg_port = int(os.getenv("PORT_SNOW", 5432))
+        self._pg_user = os.getenv("USER_SNOW")
+        self._pg_password = os.getenv("PASS_SNOW")
+        self._pg_dbname = os.getenv("DB_SNOW")
+
     def connect(self):
         """Conectar a la base de datos PostgreSQL"""
         conn = psycopg2.connect(
